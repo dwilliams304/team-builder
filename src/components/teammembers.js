@@ -1,19 +1,17 @@
 import React from "react";
 
 
-const TeamMembers = (props) => {
-    const {name, email, role, id} = props;
+export default function TeamMembers(props){
+    const {details} = props;
 
 
     return(
-        <div>
-            <h3>Details of team member with id: {id}</h3>
-            <p>Name: {name}</p>
-            <p>Email: {email}</p>
-            <p>Role: {role}</p>
+        <div className="container">
+            <h2>Details for team member with id: {props.id}</h2>
+            <p>Name: {details.name}</p>
+            <p>Email: {details.email}</p>
+            <p>Role: {details.role}</p>
         </div>
     )
 }
 
-
-export default TeamMembers;
